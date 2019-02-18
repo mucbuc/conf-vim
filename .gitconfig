@@ -1,0 +1,9 @@
+[rerere]
+	enabled = 1
+[fetch]
+	prune = 1
+[help]
+	autocorrect = 1
+[alias]
+	ssb = status -sb
+
