@@ -1,0 +1,9 @@
+echo "marks_bashrc"
+
+alias ll='ls -alh'
+alias ls='ls -lh'
+alias sudo='sudo '
+
+function gitouch() {
+  touch "$1" && git add "$1"
+}
