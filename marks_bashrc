@@ -4,19 +4,6 @@ alias ll='ls -alh'
 alias ls='ls -lh'
 alias sudo='sudo '
 
-function gitbranch() {
-  if [ -d ".git" ]
-  then
-    git rev-parse --abbrev-ref HEAD
-  else 
-    echo "."
-  fi
-}
-
-function gitouch() {
-  touch "$1" && git add "$1"
-}
-
 function setColor() {
   tput setaf $1
 }
@@ -25,4 +12,17 @@ function resetColor() {
   tput sgr0
 }
 
-export PS1="$(setColor 6)\w$(setColor 5)\$(gitbranch)$(resetColor)$"
+function gitbranch() {
+  if [ -d ".git" ]
+  then
+    echo -n "|"
+    setColor 5
+    git rev-parse --abbrev-ref HEAD 
+  fi
+}
+
+function gitouch() {
+  touch "$1" && git add "$1"
+}
+
+export PS1="$(setColor 6)\w$(resetColor)\$(gitbranch)$(resetColor)$ "
