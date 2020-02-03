@@ -1,0 +1,19 @@
+{
+  "name": "configs",
+  "version": "1.0.0",
+  "description": "some configs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mucbuc/conf-vim.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mucbuc/conf-vim/issues"
+  },
+  "homepage": "https://github.com/mucbuc/conf-vim#readme"
+}
