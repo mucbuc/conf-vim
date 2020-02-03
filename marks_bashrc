@@ -18,11 +18,11 @@ function gitouch() {
 }
 
 function setColor() {
-  tput setaf 6
+  tput setaf $1
 }
 
 function resetColor() {
   tput sgr0
 }
 
-export PS1="$(setColor)\w $(resetColor) \$(gitbranch) $"
+export PS1="$(setColor 6)\w$(setColor 5)\$(gitbranch)$(resetColor)$"
