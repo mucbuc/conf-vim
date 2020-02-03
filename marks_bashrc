@@ -17,7 +17,11 @@ function gitbranch() {
   then
     echo -n "|"
     setColor 5
-    git rev-parse --abbrev-ref HEAD 
+    git rev-parse --abbrev-ref HEAD | head -c -1
+    if git status -s | grep -m 1 -q -s .
+    then
+      echo -n "*"
+    fi
   fi
 }
 
